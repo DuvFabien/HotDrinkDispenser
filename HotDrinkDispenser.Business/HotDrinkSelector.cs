@@ -1,9 +1,10 @@
 ﻿using DrinkDispenser.DataAccessLayer;
 using DrinkDispenser.Model.Drinks;
+using HotDrinkDispenser.Business.UserInputOutput;
 
 namespace DrinkDispenser.Business
 {
-    public class DrinkSelector
+    public class DrinkSelector : IDrinkSelector
     {
         public DrinkSelector(IPrinter printer, IInputHanler handler, IDrinkRepository drinkRepository)
         {
@@ -37,7 +38,6 @@ namespace DrinkDispenser.Business
 
         private void DisplayAvailableDrinks()
         {
-            Printer.Print("");
             if (_drinks == null || !_drinks.Any())
             {
                 Printer.Print("Available products:");

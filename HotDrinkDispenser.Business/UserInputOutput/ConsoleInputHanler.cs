@@ -1,4 +1,4 @@
-﻿namespace DrinkDispenser.Business
+﻿namespace HotDrinkDispenser.Business.UserInputOutput
 {
     public class ConsoleInputHanler : IInputHanler
     {
