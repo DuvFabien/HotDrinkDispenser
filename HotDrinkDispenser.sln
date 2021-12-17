@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser", "HotDrinkDispenser\HotDrinkDispenser.csproj", "{B643CA92-407F-4A83-9841-E305433E2AE6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.Model", "HotDrinkDispenser.Model\HotDrinkDispenser.Model.csproj", "{E9D72CDC-2D77-478D-8C83-259E5662EA16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.DataAccessLayer", "HotDrinkDispenser.DataAccessLayer\HotDrinkDispenser.DataAccessLayer.csproj", "{657CBE74-67DB-4920-852E-16C92296A16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.Business", "HotDrinkDispenser.Business\HotDrinkDispenser.Business.csproj", "{5CE24447-BD9C-4270-938F-A11F04D71688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.UI", "HotDrinkDispenser.UI\HotDrinkDispenser.UI.csproj", "{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B643CA92-407F-4A83-9841-E305433E2AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B643CA92-407F-4A83-9841-E305433E2AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B643CA92-407F-4A83-9841-E305433E2AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B643CA92-407F-4A83-9841-E305433E2AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9D72CDC-2D77-478D-8C83-259E5662EA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9D72CDC-2D77-478D-8C83-259E5662EA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9D72CDC-2D77-478D-8C83-259E5662EA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9D72CDC-2D77-478D-8C83-259E5662EA16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657CBE74-67DB-4920-852E-16C92296A16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657CBE74-67DB-4920-852E-16C92296A16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657CBE74-67DB-4920-852E-16C92296A16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657CBE74-67DB-4920-852E-16C92296A16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CE24447-BD9C-4270-938F-A11F04D71688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CE24447-BD9C-4270-938F-A11F04D71688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CE24447-BD9C-4270-938F-A11F04D71688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CE24447-BD9C-4270-938F-A11F04D71688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
