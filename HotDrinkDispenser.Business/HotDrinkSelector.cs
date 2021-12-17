@@ -1,52 +1,45 @@
-﻿using HotDrinkDispenser.DataAccessLayer;
-using HotDrinkDispenser.Model.HotDrinks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DrinkDispenser.DataAccessLayer;
+using DrinkDispenser.Model.Drinks;
 
-namespace HotDrinkDispenser.Business
+namespace DrinkDispenser.Business
 {
-    public class HotDrinkSelector
+    public class DrinkSelector
     {
-        public HotDrinkSelector(IPrinter printer, IInputHanler handler, IHotDrinkRepository hotDrinkRepository)
+        public DrinkSelector(IPrinter printer, IInputHanler handler, IDrinkRepository drinkRepository)
         {
             Printer = printer;
             Handler = handler;
-            HotDrinkRepository = hotDrinkRepository;
+            DrinkRepository = drinkRepository;
+
+            _drinks = DrinkRepository.GetAvaiableRecipes();
         }
 
         public IPrinter Printer { get; }
         public IInputHanler Handler { get; }
-        public IHotDrinkRepository HotDrinkRepository { get; }
+        public IDrinkRepository DrinkRepository { get; }
 
-        public int SelectDrink()
+        private readonly List<Drink> _drinks;
+
+        public Drink? SelectDrink()
         {
             DisplayAvailableDrinks();
-            return GetSelectedDrink();
-        }
+            Printer.Print("Please select drink's id then press enter");
+            string input = Handler.GetInput();
 
-        private int GetSelectedDrink()
-        {
-            string input = string.Empty;
-            int id;
-            while (!int.TryParse(input, out id))
+            if (!int.TryParse(input, out int id))
             {
-                Printer.Print("Please select drink's id then press enter");
-                input = Handler.GetInput();
+                Printer.Print("Invalid selection");
+                return null;
             }
-            return id;
+
+            return _drinks.FirstOrDefault(d => d.Id == id);
         }
 
         private void DisplayAvailableDrinks()
         {
-            Printer.Print("Welcome");
-
-            var drinks = HotDrinkRepository.GetAvaiableRecipes();
-            if (drinks == null || !drinks.Any())
+            Printer.Print("");
+            if (_drinks == null || !_drinks.Any())
             {
-
                 Printer.Print("Available products:");
                 Printer.Print("No products avaiable");
                 return;
@@ -54,7 +47,7 @@ namespace HotDrinkDispenser.Business
 
             Printer.Print("");
             Printer.Print("Available products:");
-            foreach (var drink in drinks)
+            foreach (var drink in _drinks)
             {
                 Printer.Print("#" + drink.Id + ": " + drink.Name);
             }

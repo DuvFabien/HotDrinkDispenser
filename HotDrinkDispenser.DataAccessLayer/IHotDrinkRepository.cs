@@ -1,10 +1,10 @@
-﻿using HotDrinkDispenser.Model.HotDrinks;
+﻿using DrinkDispenser.Model.Drinks;
 
-namespace HotDrinkDispenser.DataAccessLayer
+namespace DrinkDispenser.DataAccessLayer
 {
-    public interface IHotDrinkRepository
+    public interface IDrinkRepository
     {
-        HotDrink? GetRecipeById(int id);
-        List<HotDrink>? GetAvaiableRecipes();
+        Drink? GetDrinkById(int id);
+        List<Drink> GetAvaiableRecipes();
     }
 }

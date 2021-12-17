@@ -1,8 +1,8 @@
-﻿namespace HotDrinkDispenser.Model.Ingredients
+﻿namespace DrinkDispenser.Model.Ingredients
 {
     public class Water : Ingredient
     {
-        public Water(int price) : base("Water", price)
+        public Water() : base("Water", new decimal(0.2))
         {
         }
     }

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HotDrinkDispenser.Model.Ingredients
+﻿namespace DrinkDispenser.Model.Ingredients
 {
     public abstract class Ingredient
     {
-        protected Ingredient(string name, int price)
+        protected Ingredient(string name, decimal price)
         {
             Name = name;
             Price = price;

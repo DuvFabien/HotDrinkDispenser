@@ -1,4 +1,4 @@
-﻿namespace HotDrinkDispenser.Business
+﻿namespace DrinkDispenser.Business
 {
     public interface IPrinter
     {
