@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.DataAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.Business", "HotDrinkDispenser.Business\HotDrinkDispenser.Business.csproj", "{5CE24447-BD9C-4270-938F-A11F04D71688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.UI", "HotDrinkDispenser.UI\HotDrinkDispenser.UI.csproj", "{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDrinkDispenser.Launcher", "HotDrinkDispenser.UI\HotDrinkDispenser.Launcher.csproj", "{C4398EC4-160C-4CCE-B5F5-4DE47C718A9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
